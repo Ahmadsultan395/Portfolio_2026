@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Central design tokens. Every component reads from these variables.
+   Change a colour here and the whole site (both themes) follows.
+   ========================================================================== */
+
+:root {
+  color-scheme: dark;
+
+  /* Colour — dark (default) */
+  --bg: #080908;
+  --surface: #111411;
+  --surface-2: #191d19;
+  --accent: #c8ff35;
+  --accent-ink: #0b0f02; /* text placed on top of --accent */
+  --text: #f4f5ef;
+  --text-2: #a1a69d;
+  --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.26);
+  --grid-line: rgba(255, 255, 255, 0.045);
+  --shadow-sm: 0 8px 28px -14px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 40px 90px -36px rgba(0, 0, 0, 0.85);
+  --accent-soft: color-mix(in srgb, var(--accent) 13%, transparent);
+  --accent-mid: color-mix(in srgb, var(--accent) 30%, transparent);
+  --nav-bg: color-mix(in srgb, var(--bg) 78%, transparent);
+  --image-filter: none;
+
+  /* Typography (system stacks: no external font requests) */
+  /* Fonts are self-hosted via @fontsource (no external requests); system fonts are the fallback */
+  --font-sans: "Inter Variable", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Anton", "Impact", "Haettenschweiler", "Arial Narrow Bold", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: clamp(1.1rem, 1rem + 0.4vw, 1.3rem);
+  --fs-h3: clamp(1.4rem, 1.1rem + 1.2vw, 2rem);
+  --fs-h2: clamp(2.4rem, 1.4rem + 4.6vw, 5.6rem);
+  --fs-hero: min(17.2vw, 15rem);
+
+  /* Spacing, radii, layout */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 24px;
+  --r-pill: 999px;
+  --gutter: clamp(20px, 4vw, 56px);
+  --maxw: 1360px;
+
+  /* Motion */
+  --dur-fast: 180ms;
+  --dur-med: 420ms;
+  --dur-slow: 900ms;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f5f6f0;
+  --surface: #ffffff;
+  --surface-2: #e9ede4;
+  --accent: #416b00;
+  --accent-ink: #ffffff;
+  --text: #151914;
+  --text-2: #525a50;
+  --border: rgba(0, 0, 0, 0.12);
+  --border-strong: rgba(0, 0, 0, 0.3);
+  --grid-line: rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 8px 24px -14px rgba(30, 40, 20, 0.25);
+  --shadow-lg: 0 40px 80px -40px rgba(30, 40, 20, 0.35);
+  --accent-soft: color-mix(in srgb, var(--accent) 10%, transparent);
+  --accent-mid: color-mix(in srgb, var(--accent) 24%, transparent);
+  --nav-bg: color-mix(in srgb, var(--bg) 82%, transparent);
+  --image-filter: contrast(1.02) saturate(1.02);
+}
